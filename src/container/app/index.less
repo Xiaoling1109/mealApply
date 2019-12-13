@@ -1,67 +1,105 @@
 @import '../../styles/index.less';
 
-.container {
+.containee {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    
-    .mealName {
+    justify-content: center;
+    height: -webkit-fill-available;
+    background: #F7F8F9;
+    .container {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-        .name {
+        .mealName {
+            display: flex;
+
+            .name {
+                font-family: PingFangSC-Regular;
+                font-size: 16px;
+                color: #000000;
+                //width: 1.3rem;
+                text-align: right;
+              
+            }
+
+            input {
+                color: #999999;
+                height: 30px;
+            }
+
+            input::placeholder {
+                flex: 1;
+                font-family: PingFangSC-Regular;
+                font-size: 16px;
+                color: #CCCCCC;
+                height: 40px;
+
+            }
+
+            div:nth-of-type(2) {
+                flex: 1;
+            }
+        }
+
+        .mealDate {
+            display: flex;
+            margin-top: 15px;
+            margin-left: 25px;
+
+            .date {
+                //width: 1.3rem;
+                font-family: PingFangSC-Regular;
+                font-size: 16px;
+                color: #000000;
+                text-align: right;
+            }
+
+            div:nth-of-type(2) {
+                flex: 1;
+            }
+
+
+        }
+        .mealType{
+            display: flex;
+            margin-top:15px;
+            align-items: center;
+
+            .type{
+                font-family: PingFangSC-Regular;
+                font-size: 16px;
+                color: #000000;
+                text-align: right;
+                margin-left: 53px;;
+            }
+            span{
+                width: 0.7rem;
+                height: 0.30rem;
+                line-height:0.30rem ;
+                font-family: PingFangSC-Regular;
+                font-size: 16px;
+                color: #000000;
+                text-align: center;
+                background: white;
+               // background: #FFDB55;
+                border-radius: 22px;
+                margin-right: 0.2rem;
+            }
+        }
+
+        .applyMeal {
+            width: 2.05rem;
+            height: 0.44rem;
             font-family: PingFangSC-Regular;
             font-size: 16px;
             color: #000000;
-            //width: 1.3rem;
-            text-align: right;
+            text-align: center;
+            background-image: linear-gradient(90deg, rgb(24, 133, 177) 0%, rgb(18, 100, 155) 100%);
+            border-radius: 22px;
+            line-height: 0.44rem;
+            margin-top: 29px;
         }
-
-        input {
-            color: #999999;
-        }
-
-        input::placeholder {
-            flex: 1;
-            font-family: PingFangSC-Regular;
-            font-size: 14px;
-            color: #CCCCCC;
-
-        }
-
-        div:nth-of-type(2){
-            flex: 1;
-        }
-    }
-
-    .mealDate {
-        display: flex;
-        margin-top: 10px;
-        margin-left: 25px;
-    
-        .date {
-            //width: 1.3rem;
-            font-family: PingFangSC-Regular;
-            font-size: 16px;
-            color: #000000;
-            text-align: right;
-        }
-        div:nth-of-type(2){
-            flex: 1;
-        }
-        
-
-    }
-
-    .applyMeal {
-        width: 2.05rem;
-        height: 0.44rem;
-        font-family: PingFangSC-Regular;
-        font-size: 16px;
-        color: #000000;
-        text-align: center;
-        background-image: linear-gradient(90deg, rgb(24, 133, 177) 0%, rgb(18, 100, 155) 100%);
-        border-radius: 22px;
-        line-height: 0.44rem;
-        margin-top: 29px;
     }
 }
