@@ -9,12 +9,17 @@ const AsyncMenu=Loadable({
     loading:Loading
 })
 
+const AsyncSearch=Loadable({
+    loader:()=>import('../search'),
+    loading:Loading
+})
+
 export default class Main extends React.Component {
     render() {
         return (
             <Switch>
                 <Route path='/' exact={true} component={AsyncMenu}></Route>
-               
+                <Route path='/search' exact={true} component={AsyncSearch}></Route>
             </Switch>
         )
     }
