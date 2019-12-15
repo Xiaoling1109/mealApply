@@ -14,11 +14,16 @@ class App extends Component {
             slected:'launch'
         }
     }
+   
     onChange(date, dateString) {
         console.log(date, dateString)
         this.setState({
             datePickerShow: true
         })
+    }
+    handleClick(){
+        document.activeElement.blur();
+        this.$refs.scanTextbox.setAttribute('readonly', 'readonly');
     }
     render() {
         const { datePickerShow,slected } = this.state
@@ -37,8 +42,8 @@ class App extends Component {
                         </div>
                         <div className="mealDate">
                             <div className="date">申请日期：</div>
-                            <div>
-                                <DatePicker onChange={() => this.onChange()} placeholder="选择日期" />
+                            <div className="datePicker" onClick={()=>{this.handleClick()}}>
+                                <DatePicker  onChange={() => this.onChange()} placeholder="选择日期" />
                             </div>
                         </div>
                         <div className="mealType">
